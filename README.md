@@ -26,6 +26,7 @@ Once initialized, make sure to follow these steps:
 
 - [ ] Update the name, description and author in the `package.json` file.
 - [ ] Update the heading in the `CHANGELOG.md` file.
+- [ ] Replace the author in the `LICENSE` file.
 - [ ] Replace this README's content with your own.
 - [ ] Upload to GitHub.
 - [ ] Set up the `NPM_TOKEN` secret for the publish action.
