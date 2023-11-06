@@ -22,6 +22,8 @@ The easiest way to use this template is by using `bun create`:
 bun create DaniGuardiola/package-template my-package
 ```
 
+You can also use the "Use this template" button on GitHub.
+
 Once initialized, make sure to follow these steps:
 
 - [ ] Update the name, description and author in the `package.json` file.
