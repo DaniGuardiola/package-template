@@ -27,12 +27,41 @@ You can also use the "Use this template" button on GitHub.
 Once initialized, make sure to follow these steps:
 
 - [ ] Update the name, description and author in the `package.json` file.
-- [ ] Update the heading in the `CHANGELOG.md` file.
+- [ ] Update the heading of the `CHANGELOG.md` file.
 - [ ] Replace the author in the `LICENSE` file.
 - [ ] Replace this README's content with your own.
-- [ ] Upload to GitHub.
-- [ ] Set up the `NPM_TOKEN` secret for the publish action.
+- [ ] Publish to GitHub.
+- [ ] Register the `NPM_TOKEN` secret for GitHub actions.
+
+  This is required to publish the package to npm from the `publish.yml` workflow.
+
+  1. Go to `https://www.npmjs.com/<your username>/tokens`.
+  2. Generate a new access token that has read and write permissions for, at the very least, your new package.
+  3. Copy the token and go to your GitHub repository.
+  4. Go to Settings > Secrets and variables > Actions.
+  5. Create a new repository secret called `NPM_TOKEN` and paste the token as its value.
+
+- [ ] Enable the right permissions for the `GITHUB_TOKEN` secret:
+
+  This is required for Changesets to create and update pull requests for versioning from the `publish.yml` workflow.
+
+  1. In your GitHub repository, go to Settings > Actions > General.
+  2. Scroll down to "Workflow permissions".
+  3. Select the "Read and write permissions".
+  4. Enable "Allow GitHub Actions to create and approve pull requests".
+
 - [ ] Create a great package and publish it to npm! 🚀
+
+## Releases
+
+This template uses [Changesets](https://github.com/changesets/changesets) to manage releases. Check out their documentation to learn how to use it. The basic idea is:
+
+1. Make changes.
+2. Run `bun changeset` to create a new changeset.
+3. Commit and push the changeset (either directly to `main` or by merging a pull request).
+4. A PR titled "Version Packages" will be created (or updated) by the `publish.yml` workflow.
+5. Merge the PR when you're ready to publish a new version.
+6. The `publish.yml` workflow will publish the new version to npm.
 
 ## Contributing
 
