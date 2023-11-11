@@ -63,6 +63,17 @@ This template uses [Changesets](https://github.com/changesets/changesets) to man
 5. Merge the PR when you're ready to publish a new version.
 6. The `publish.yml` workflow will publish the new version to npm.
 
+## Recommendations
+
+This is a list of settings and other things that I usually do in my packages. They are not mandatory though!
+
+- General settings
+  - [ ] Enable "Always suggest updating pull request branches".
+  - [ ] Enable "Allow auto-merge".
+  - [ ] Enable "Automatically delete head branches".
+  - [ ] From "Allow merge commits/squash merging/rebase merging" leave only "Allow squash merging" enabled.
+  - [ ] In the same setting, select "Default to pull request title".
+
 ## Contributing
 
 Contributions are welcome, but I will need to agree to significant changes since this is, after all, my personal template. Feel free to open an issue to discuss it.
