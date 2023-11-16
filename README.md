@@ -88,7 +88,7 @@ This is a list of settings and other things that I usually do in my packages. Th
   - [ ] Add the following status checks as required: `check-format`, `check-types`, `lint`.
   - [ ] Enable "Lock branch".
 
-  Finally, click "Save changes".
+  Finally, click "Create".
 
 ## Contributing
 
