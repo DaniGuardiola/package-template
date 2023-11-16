@@ -2,7 +2,7 @@ name: Check types
 on:
   pull_request:
 jobs:
-  check:
+  check-types:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
