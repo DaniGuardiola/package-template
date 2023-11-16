@@ -13,6 +13,7 @@ Here's what's included:
   - Using the recommended rules from [`eslint`](https://eslint.org/docs/latest/rules/) and [`@typescript-eslint`](https://typescript-eslint.io/rules/?=recommended) + deterministic import sort.
 - [Prettier](https://prettier.io/): code formatting.
 - Bug and feature request forms for GitHub issues.
+- Automatic pull request CI checks: types, format, and linting.
 
 ## Usage
 
