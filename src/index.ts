@@ -2,4 +2,4 @@ export function helloWorld() {
   return "Hello World!";
 }
 
-export const intentionalError = "This is an intentional error";
+export const intentionalError: number = "This is an intentional error";
