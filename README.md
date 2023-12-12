@@ -36,7 +36,7 @@ Once initialized, make sure to follow these steps:
 
   This is required to publish the package to npm from the `publish.yml` workflow.
 
-  1. Go to `https://www.npmjs.com/<your username>/tokens`.
+  1. Go to `https://www.npmjs.com/settings/<your username>/tokens`.
   2. Generate a new access token that has read and write permissions for, at the very least, your new package.
   3. Copy the token and go to your GitHub repository.
   4. Go to Settings > Secrets and variables > Actions.
