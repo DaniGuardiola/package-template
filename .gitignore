@@ -1,6 +1,5 @@
 node_modules/
 \*.tsbuildinfo
-.eslintcache
 
 .env
 .env.development.local
@@ -9,5 +8,3 @@ node_modules/
 .env.local
 
 dist/
-.tshy/
-.tshy-build/
