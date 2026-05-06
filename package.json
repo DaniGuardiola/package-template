@@ -27,7 +27,7 @@
     "fmt:check": "oxfmt . --check",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
-    "publish": "bun run build && changeset publish",
+    "release": "bun run build && changeset publish",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
