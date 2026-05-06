@@ -32,7 +32,6 @@ Prerequisites:
 
 - Install and authenticate [`gh`](https://cli.github.com/).
 - Authenticate with a token that can create repositories and update repository administration settings.
-- Create an npm automation token for the new package.
 
 ```sh
 OWNER="your-github-user-or-org"
@@ -88,8 +87,6 @@ gh api \
   "repos/$OWNER/$REPO/actions/permissions/workflow" \
   -F default_workflow_permissions=write \
   -F can_approve_pull_request_reviews=true
-
-gh secret set NPM_TOKEN --repo "$OWNER/$REPO"
 ```
 
 Then update package metadata, the license, changelog heading, and README content before publishing.
@@ -101,14 +98,28 @@ Once initialized, make sure to follow these steps:
 - [ ] Replace the author in the `LICENSE` file.
 - [ ] Replace this README's content with your own.
 - [ ] Publish to GitHub.
-- [ ] Register the `NPM_TOKEN` secret for GitHub actions.
+- [ ] Publish the initial version to npm from your local machine.
 
-  This is required to publish the package to npm from the `publish.yml` workflow.
-  1. Go to `https://www.npmjs.com/settings/<your username>/tokens`.
-  2. Generate a new access token that has read and write permissions for, at the very least, your new package.
-  3. Copy the token and go to your GitHub repository.
-  4. Go to Settings > Secrets and variables > Actions.
-  5. Create a new repository secret called `NPM_TOKEN` and paste the token as its value.
+  npm trusted publishing requires the package to exist before it can be connected to a GitHub workflow.
+
+  ```sh
+  bun run build
+  npm publish
+  ```
+
+  Complete the normal npm two-factor authentication prompt when asked.
+
+- [ ] Authorize GitHub Actions to publish on npm.
+
+  This is the npm-side permission grant. It lets this repository's `publish.yml` workflow publish with GitHub OIDC instead of a long-lived npm token.
+  1. Go to the package page on npm.
+  2. Open package settings.
+  3. Open "Trusted publishers".
+  4. Add a trusted publisher with provider "GitHub Actions".
+  5. Set owner to your GitHub user or organization.
+  6. Set repository to your repository name.
+  7. Set workflow filename to `publish.yml`.
+  8. Leave environment empty unless the workflow uses a GitHub environment.
 
 - [ ] Enable the right permissions for the `GITHUB_TOKEN` secret:
 
