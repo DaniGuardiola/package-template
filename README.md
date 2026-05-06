@@ -78,6 +78,7 @@ gh api \
   "allow_force_pushes": false,
   "allow_deletions": false,
   "block_creations": false,
+  "lock_branch": true,
   "allow_fork_syncing": true
 }
 JSON
