@@ -1,19 +1,15 @@
 {
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
-    "allowJs": false,
     "declaration": true,
-    "forceConsistentCasingInFileNames": true,
+    "declarationMap": true,
     "isolatedDeclarations": true,
     "lib": ["ESNext"],
-    "module": "NodeNext",
-    "moduleDetection": "force",
-    "moduleResolution": "NodeNext",
-    "noEmitOnError": true,
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
     "outDir": "dist",
     "rootDir": "src",
-    "skipLibCheck": true,
-    "strict": true,
+    "sourceMap": true,
     "target": "ESNext",
     "types": [
       "bun-types" // add Bun global

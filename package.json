@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": {
     "name": "Dani Guardiola",
-    "email": "hi@daniguardio.la",
+    "email": "github.contact@alias.dio.la",
     "url": "https://dio.la/"
   },
   "files": [
@@ -23,9 +23,10 @@
   },
   "scripts": {
     "build": "tsc",
-    "format": "oxfmt .",
-    "format:check": "oxfmt . --check",
-    "lint": "oxlint --type-aware --type-check .",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt . --check",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
     "publish": "bun run build && changeset publish",
     "typecheck": "tsc --noEmit"
   },

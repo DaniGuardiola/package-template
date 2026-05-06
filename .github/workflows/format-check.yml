@@ -11,4 +11,4 @@ jobs:
           bun-version: latest
       - run: bun install --frozen-lockfile --ignore-scripts
       - name: Check format
-        run: bun run format:check
+        run: bun run fmt:check

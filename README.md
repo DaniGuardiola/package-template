@@ -78,7 +78,6 @@ gh api \
   "allow_force_pushes": false,
   "allow_deletions": false,
   "block_creations": false,
-  "lock_branch": true,
   "allow_fork_syncing": true
 }
 JSON
@@ -152,7 +151,6 @@ This is a list of settings and other things that I usually do in my packages. Th
   - [ ] Enable "Require status checks to pass before merging".
   - [ ] Enable "Require branches to be up to date before merging".
   - [ ] Add the following status checks as required: `check-format`, `check-types`, `lint`.
-  - [ ] Enable "Lock branch".
 
   Finally, click "Create".
 
